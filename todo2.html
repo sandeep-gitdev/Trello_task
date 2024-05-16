@@ -4,51 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo 2</title>
-
+<style>
+   .container {
+    padding: 10px;
+    margin: 5px;
+   }
+</style>
 
 
   </head>
   <body>
     <h2 >Daily task</h2>
     <form >
-      <div>
+      <div class="container">
         First Name:<input type="text" name="myname" minlength="2" maxlength="100"/>
-        <br />
+        <br>
         last Name: <input type="text" minlength="2" maxlength="100" />
-      </div>
-      <br />
-      <div>
+      
+      <br>
+      
         E-mail:
         <input type="email" name="myEmail" minlength="2" maxlength="100" />
-      </div>
-      <br />
-      <div>
+      
+      <br>
+      
         <label for="datemin"></label>
         D.O.B: <input type="date" name="D.O.B" id="datemin" min="2008-01-01" max="2024-05-01"/> (min: 16 year)
-    </div>
-      <br />
-      <div>Address : <input type="textarea" name="Address" /></div>
+    
       <br>
-      <div>PIN: <input id="pin" type="text" /></div>
+      Address : <input type="textarea" name="Address" />
       <br>
-      <div>
+      PIN: <input id="pin" type="text" />
+      <br>
+      
         Gender: male<input type="radio" name="Gender" id=""/>
                 Female<input type="radio" name="Gender"/>
                 Other<input type="radio" name="Gender" id=""/>
-      </div>
+      
       <br>
-      <div>
+      
         Allow Terms and conditions
-        <input type="checkbox" name="Terms and conditions" id="check" onclick="enable()"/>
-      </div>
+        <input type="checkbox" id="check" onclick="enable()" />
+      
       <br>
-      <div>
-        <button id="btn">Submit</button>
+      
+        <button disabled="true" id="btn" onclick="myFi()">submit</button>
       </div>
     </form>
 
      <script>
+           function myFi(){
+            alert("value submitted");
+           }
 
+           function enable(){
+            let check = document.getElementById("check");
+            let btn = document.getElementById("btn");
+              
+               if (check.checked){
+                  btn.removeAttribute("disabled");
+               }
+               else {
+                btn.disabled = "true";
+               }
+
+           }
      </script>
 
   </body>
