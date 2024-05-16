@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo 2</title>
+
+
+
+  </head>
+  <body>
+    <h2 >Daily task</h2>
+    <form >
+      <div>
+        First Name:<input type="text" name="myname" minlength="2" maxlength="100"/>
+        <br />
+        last Name: <input type="text" minlength="2" maxlength="100" />
+      </div>
+      <br />
+      <div>
+        E-mail:
+        <input type="email" name="myEmail" minlength="2" maxlength="100" />
+      </div>
+      <br />
+      <div>
+        <label for="datemin"></label>
+        D.O.B: <input type="date" name="D.O.B" id="datemin" min="2008-01-01" max="2024-05-01"/> (min: 16 year)
+    </div>
+      <br />
+      <div>Address : <input type="textarea" name="Address" /></div>
+      <br>
+      <div>PIN: <input id="pin" type="text" /></div>
+      <br>
+      <div>
+        Gender: male<input type="radio" name="Gender" id=""/>
+                Female<input type="radio" name="Gender"/>
+                Other<input type="radio" name="Gender" id=""/>
+      </div>
+      <br>
+      <div>
+        Allow Terms and conditions
+        <input type="checkbox" name="Terms and conditions" id="check" onclick="enable()"/>
+      </div>
+      <br>
+      <div>
+        <button id="btn">Submit</button>
+      </div>
+    </form>
+
+     <script>
+
+     </script>
+
+  </body>
+</html>
